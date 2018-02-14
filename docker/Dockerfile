@@ -29,8 +29,8 @@ RUN tar -xzvf master.tar.gz \
 &&  rm -rf lets-chat-master
 
 #RUN groupadd -r node \
-RUN useradd -r -g node node \
-&&  chown node:node uploads \
+#&& useradd -r -g node node \
+RUN chown node:node uploads \
 &&  mkdir -p builtAssets \
 &&  chown node:node builtAssets \
 &&  chmod -R 777 uploads
