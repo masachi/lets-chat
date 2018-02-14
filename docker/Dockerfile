@@ -18,7 +18,7 @@ RUN set -x \
 &&  npm install --production \
 &&  npm install $LCB_PLUGINS \
 &&  npm dedupe \
-&&  npm cache clean \
+#&&  npm cache clean \
 &&  rm -rf /tmp/npm* \
 &&  apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false -o APT::AutoRemove::SuggestsImportant=false $BUILD_DEPS
 
