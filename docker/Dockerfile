@@ -32,7 +32,8 @@ RUN groupadd -r node \
 &&  useradd -r -g node node \
 &&  chown node:node uploads \
 &&  mkdir -p builtAssets \
-&&  chown node:node builtAssets
+&&  chown node:node builtAssets \
+&&  chmod -R 777 uploads
 
 ENV LCB_DATABASE_URI=mongodb://mongo/letschat \
     LCB_HTTP_HOST=0.0.0.0 \
